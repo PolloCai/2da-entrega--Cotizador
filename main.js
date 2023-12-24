@@ -30,7 +30,7 @@ function cotizarAPeso() {
             // Redondeamos resultado
             const dolar = ((cotizar * 905).toFixed(2));
             alert ("Su cantidad de Dólares equivalen a $ " + (dolar)  + " Pesos");
-            cotizaciones.push({ tipo: "Dólares a Pesos", cantidad: cotizar, resultado: dolar.toLocaleString("es-ES") });
+            cotizaciones.push({ tipo: "Dólares a Pesos", cantidad: cotizar, resultado: dolar });
             break;
         } else {
             alert ("La cantidad ingresada NO es válida");
@@ -63,7 +63,7 @@ function cotizarADolar() {
 }
 
 function buscarCotizaciones() {
-    const filtro = prompt("Ingrese el tipo de cotización que desea buscar (Dolares a Pesos / Pesos a Dolares)").toLowerCase();
+    const filtro = prompt("Ingrese el tipo de cotización que desea buscar (Dólares a Pesos / Pesos a Dólares)").toLowerCase();
     const cotizacionesFiltradas = cotizaciones.filter(cotizacion => cotizacion.tipo.toLowerCase() === filtro);
     if (cotizacionesFiltradas.length > 0) {
         let mensaje = `Cotizaciones encontradas (${filtro}):\n\n`;
