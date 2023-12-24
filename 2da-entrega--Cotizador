@@ -15,7 +15,7 @@ const dni = parseInt (prompt ("Ingrese su DNI"));
 const dniUsuario = dni.toLocaleString("es-ES");
 const usuario = new cliente (nombreUsuario, apellidoUsuario, dniUsuario);
 
-// Array -->
+// Arrays -->
 
 const cotizaciones = [];
 const historial = [];
